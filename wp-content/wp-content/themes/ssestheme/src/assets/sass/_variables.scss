@@ -1,0 +1,32 @@
+//  Colors
+$white: #fff;
+$black: #000;
+$bodyBg: #fff;
+$textColor: #333;
+$theme: #18407e;
+$theme2: #00a3b3;
+
+// Theme
+$transition: .4s;
+$linkColor: #55b3f3;
+$linkColorHover: darken($linkColor, 20%);
+
+//  Fonts
+$fontFamily: 'DINPro', Helvetica, Arial, sans-serif;
+$championFont: 'Champion-HTF-Welterweight', Helvetica, Arial, sans-serif;
+
+$fontSize: 14px;
+$fontWeight: 400; // Regular
+$lineHeight: 1.2;
+
+// Base
+$containerPadding: 25px;
+$containerWidth: 1345px + $containerPadding * 2;
+
+//  Responsive
+// $screen-xs: 0;
+// $screen-sm: 480px;
+// $screen-md: 768px;
+// $screen-lg: 992px;
+// $screen-xl: 1200px;
+$screen-md: 998px;

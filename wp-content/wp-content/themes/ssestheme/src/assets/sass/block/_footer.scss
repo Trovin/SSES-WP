@@ -1,0 +1,118 @@
+.footer {
+    position: relative;
+    flex: 0 0 auto;
+    background-color: $white;
+
+    .section_interess__items-wrapper {
+        margin-top: 80px;
+    }
+}
+
+.pre-footer {
+    padding: 60px 0 25px;
+    border-bottom: 3px solid #f5f5f5;
+
+    &_small {
+        padding: 15px 0 25px;
+    }
+}
+
+.check-block {
+    width: 140px;
+    margin: 0 auto 30px;
+    padding: 13px 0 15px;
+    text-align: center;
+    border-top: 2px solid #afca0b;
+    border-bottom: 2px solid #afca0b;
+}
+
+.footer__id-number {
+    text-align: center;
+    font-size: 36px;
+    color: $theme;
+    font-family: $championFont;
+    margin-bottom: 55px;
+}
+
+.footer-nav__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+        margin-right: 52px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 19.02px;
+            color: $theme;
+            transition: $transition;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                border-bottom: 1px solid #4d74b1;
+            }
+        }
+    }
+}
+
+.footer-nav__list-main {
+    @include max-w(767px) {
+        display: none;
+    }
+}
+
+.footer-nav__list-additional {
+    padding: 0 10px;
+
+    li {
+        @include max-w(767px) {
+            margin-right: 20px;
+        }
+    }
+
+    li a {
+        font-size: 17px;
+        line-height: 19.85px;
+    }
+}
+
+.footer-section {
+    padding: 30px 0 40px;
+}
+
+.footer-nav__additional {
+    margin-bottom: 45px;
+}
+
+.footer-info__copyright-wrapper {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.87px;
+}
+
+.footer-copyright {
+    width: 790px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: $theme;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.87px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include max-w(767px) {
+        font-size: 14px;
+
+        * {
+            margin-bottom: 10px;
+        }
+    }
+}

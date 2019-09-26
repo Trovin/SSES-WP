@@ -1,0 +1,64 @@
+.section__page-intro {
+    width: 100%;
+    background-color: $theme2;
+    padding-bottom: 70px;
+    text-align: center;
+    color: $white;
+
+    .contact-phone {
+        margin-top: 40px;
+        display: block;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+.section__page-intro-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.section__page-intro-image {
+    width: 100%;
+    max-width: inherit;
+    margin: 0 auto;
+
+    @include max-w(767px) {
+        width: 250%;
+        margin-left: -75%;
+    }
+}
+
+.section__page-intro-headline {
+    width: 640px;
+    max-width: 100%;
+    margin: 5px auto 25px;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 80.68px;
+
+    @include max-w(998px) {
+        font-size: 36px;
+        line-height: 120%;
+    }
+
+    @include max-w(768px) {
+        font-size: 32px;
+        line-height: 120%;
+    }
+}
+
+.section__page-intro-info {
+    width: 640px;
+    max-width: 100%;
+    margin: 0 auto 35px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+
+    * {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23px;
+    }
+}

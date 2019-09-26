@@ -1,0 +1,40 @@
+.error-404 {
+    padding: 80px 0;
+}
+
+.home404__link {
+    font-size: 33px;
+    color: $theme2;
+    border-bottom: 1px solid $theme2;
+    transition: $transition;
+    font-family: $championFont;
+
+    &:hover {
+        color: $theme;
+        border-bottom: 1px solid $theme;
+    }
+}
+
+.form-wrapper {
+    width: 460px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #f6f8fa;
+    padding: 62px 62px 45px;
+    text-align: center;
+
+    @include max-w(420px) {
+        padding: 40px 25px;
+    }
+
+    a {
+        font-size: 12px;
+        font-weight: 400;
+        color: $theme2;
+        border-bottom: 1px solid $theme2;
+    }
+}
+
+span.wpcf7-not-valid-tip {
+    margin-bottom: 20px;
+}

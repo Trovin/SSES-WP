@@ -1,0 +1,51 @@
+.page-template-template-login {
+
+    input[type='submit'] {
+        margin: 0 auto 22px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .section__page-intro-headline {
+        width: 100%;
+    }
+
+    .section__page-intro {
+        padding-bottom: 35px;
+    }
+
+    .section_interess__items-wrapper, .check-block, .footer__id-number {
+        display: none;
+    }
+
+    .form-wrapper {
+        margin: 105px auto 195px;
+
+        @include max-w(1200px) {
+            margin: 85px auto 125px;
+        }
+
+        @include max-w(768px) {
+            margin: 55px auto;
+        }
+
+        .ajax-loader {
+            display: none;
+        }
+
+        span.wpcf7-not-valid-tip {
+            margin-bottom: 20px;
+        }
+    }
+
+    label {
+        display: block;
+        width: 290px;
+        max-width: 100%;
+        margin: 0 auto;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        color: $theme;
+    }
+}

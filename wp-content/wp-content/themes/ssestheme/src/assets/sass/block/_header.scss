@@ -1,0 +1,239 @@
+.header {
+    position: relative;
+    width: 100%;
+    background-color: $white;
+    z-index: 5;
+
+    .page-container {
+        position: relative;
+    }
+}
+
+.page-container_header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include max-w(998px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.main-nav {
+    display: none;
+
+    @include min-w(999px) {
+        display: flex;
+    }
+
+    @include max-w($screen-md) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .9);
+        overflow-y: auto;
+    }
+}
+
+.main-nav__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    li {
+        margin-top: 40px;
+        margin-right: 35px;
+
+        @include max-w(1100px) {
+            margin-right: 25px;
+        }
+
+        @include max-w($screen-md) {
+            margin: 0;
+        }
+
+        &:last-child {
+            margin-top: 0;
+            margin-right: 0;
+        }
+    }
+
+    @include max-w($screen-md) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100%;
+        padding: 50px 20px;
+    }
+}
+
+.main-nav__link {
+    display: inline-block;
+    padding: 10px 5px 45px;
+    color: $theme;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    transition: .2s;
+    position: relative;
+    z-index: 3;
+
+    &:after {
+        content: '';
+        transition: .2s;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background-color: #27a0df;
+    }
+
+    @include min-w(999px) {
+        &:hover {
+            color: $theme2;
+        }
+    }
+
+    @include max-w(998px) {
+        &:hover {
+            color: $white;
+        }
+    }
+
+    @include max-w($screen-md) {
+        color: $white;
+        padding: 20px;
+    }
+}
+
+.current-menu-item a {
+    color: $theme;
+
+    @include max-w(998px) {
+        color: #27a0df;
+
+        &:hover {
+            color: #27a0df;
+        }
+    }
+
+    &::after {
+        width: 100%;
+    }
+}
+
+.main-logo {
+    @include max-w(1100px) {
+        max-width: 115px;
+    }
+}
+
+.btn-login .main-nav__link {
+    min-width: 145px;
+    padding: 12px 25px;
+    border: 1px solid $theme2;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 10px;
+    transition: .2s;
+
+    &:after {
+        display: none;
+    }
+
+    &:hover {
+        background-color: $theme2;
+        color: $white;
+    }
+
+    @include max-w($screen-md) {
+        color: $white;
+        margin-top: 30px;
+    }
+}
+
+//default state
+.flex-container {
+    display: flex;
+    align-items: center;
+
+    @include max-w($screen-md) {
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        padding: 50px 20px;
+        overflow-y: auto;
+    }
+}
+
+.menu-action {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 6;
+    display: none;
+    cursor: pointer;
+
+    @include max-w($screen-md) {
+        display: block;
+    }
+}
+.menu-action__item {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $theme;
+    position: absolute;
+    transition: .4s;
+
+    &:first-child {
+        top: calc(50% - 1px);
+        transform: translateY(-10px);
+    }
+
+    &:nth-child(2) {
+        top: calc(50% - 1px);
+    }
+
+    &:last-child {
+        bottom: calc(50% - 1px);
+        transform: translateY(10px);
+    }
+}
+
+//active state
+.menu-action_init {
+    overflow: hidden;
+
+    .menu-action__item {
+        &:first-child {
+            top: calc(50% - 1px);
+            transform: rotate(-45deg);
+            background-color: $white;
+        }
+        &:nth-child(2n) {
+            opacity: 0;
+        }
+        &:last-child {
+            bottom: calc(50% - 1px);
+            transform: rotate(45deg);
+            background-color: $white;
+        }
+    }
+}
+
+.rotateEl {
+    transform: rotate(180deg);
+}
+
+.disabled-scroll {
+    overflow: hidden;
+    height: 100vh;
+}

@@ -1,0 +1,89 @@
+//  Base styles
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $bodyBg;
+    color: $textColor;
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    height: 100%;
+}
+
+a {
+    color: $linkColor;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+        color: $linkColorHover;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    outline: none;
+    user-select: none;
+
+    &:hover, &:focus {
+        outline: none;
+        user-select: none;
+    }
+}
+
+section {
+    position: relative;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.page-container {
+    width: $containerWidth;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $containerPadding;
+    padding-right: $containerPadding;
+
+    @include max-w(620px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.icon {
+    display: inline-block;
+}
+
+.small-wrapper {
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+ul, ol {
+    list-style-position: inside;
+}

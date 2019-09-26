@@ -1,0 +1,143 @@
+.section__two-part {
+    padding: 190px 0 170px;
+
+    @include max-w(998px) {
+        padding: 120px 0;
+    }
+
+    @include max-w(768px) {
+        padding: 80px 0;
+    }
+
+    .btn {
+        min-width: 260px;
+
+        @include max-w(768px) {
+            min-width: 220px;
+        }
+    }
+}
+
+.small-wrapper__flex-container {
+    display: flex;
+
+    @include max-w(740px) {
+        flex-wrap: wrap;
+    }
+}
+
+.left-part {
+    width: 44%;
+    position: relative;
+
+    @include max-w(740px) {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+.section_two-parts_image{
+    width: 100%;
+}
+
+.right-part {
+    width: 56%;
+    padding-top: 35px;
+    padding-left: 80px;
+
+    @include max-w(998px) {
+        padding-top: 0;
+        padding-left: 20px;
+    }
+
+    @include max-w(740px) {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+.two-part__headline {
+    font-size: 33px;
+    font-weight: 400;
+    line-height: 110%;
+    font-family: $championFont;
+    margin-bottom: 30px;
+    color: $theme2;
+
+    @include max-w(768px) {
+        font-size: 26px;
+    }
+
+    * {
+        font-size: 33px;
+        font-weight: 400;
+        line-height: 110%;
+        font-family: $championFont;
+
+        @include max-w(768px) {
+            font-size: 26px;
+        }
+    }
+}
+
+.two-part__info {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    color: $theme;
+
+    * {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23px;
+        color: $theme;
+        margin-bottom: 25px;
+    }
+
+    *:last-child {
+        margin-bottom: 40px;
+    }
+}
+
+.video-description {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 23px;
+    color: $theme;
+    position: relative;
+}
+
+.section__video-wrapper {
+    width: 100% !important;
+    height: auto !important;
+    position: relative;
+}
+
+#myVideo {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    outline: none;
+    height: 355px !important;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    @include max-w(420px) {
+        height: 260px !important;
+    }
+}
+
+video[poster]{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}

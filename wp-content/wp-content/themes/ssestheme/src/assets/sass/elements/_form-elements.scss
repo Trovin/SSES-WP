@@ -1,0 +1,72 @@
+// Все элементы формы
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='url'],
+input[type='search'],
+input[type='password'],
+textarea, select {
+    font-family: inherit;
+    width: 100%;
+    max-width: 100%;
+    background: none;
+    outline: 0 none;
+    border-radius: 24px;
+    border: 1px solid $theme2;
+    padding: 15px;
+    color: #333;
+    background-color: #fff;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+input[type='submit'] {
+    display: block;
+    margin: 22px auto;
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+.checkbox-label {
+    position: relative;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: -35px;
+        top: 8px;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #51b5c2;
+        background-color: #ffffff;
+        cursor: pointer;
+        text-align: center;
+
+        @include max-w(420px) {
+            position: relative;
+            margin: 0 auto 20px;
+            left: inherit;
+            display: block;
+        }
+    }
+
+    span {
+        cursor: pointer;
+    }
+
+    &_active {
+        &:before {
+            content: '✓';
+        }
+    }
+
+    input[type='checkbox'] {
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,72 @@
+.section-quote {
+    background-color: $white;
+    position: relative;
+}
+
+.section-quote__decoration-block {
+    width: 100%;
+    height: calc(100% - 20px);
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    opacity: .9;
+    background: url('~@img/quote-bac.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-quote__wrapper {
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 70px 40px 105px;
+    box-shadow: 0 0 27px rgba(0, 0, 0, .2);
+    border-radius: 15px;
+    background-color: #18407e;
+    position: relative;
+    text-align: center;
+
+    @include max-w(768px) {
+        padding: 30px 20px 90px;
+    }
+}
+
+.quote-icon {
+    max-width: 100px;
+    margin-bottom: 42px;
+
+    @include max-w(768px) {
+        width: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+.blockquote {
+    width: 800px;
+    max-width: 100%;
+    font-size: 29px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 41px;
+    color: $white;
+    margin: 0 auto 10px;
+
+    @include max-w(768px) {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    @include max-w(620px) {
+        font-size: 16px;
+    }
+}
+
+.blockquote-author {
+    height: 13px;
+    color: #00a3b3;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 55px;
+    text-transform: uppercase;
+}

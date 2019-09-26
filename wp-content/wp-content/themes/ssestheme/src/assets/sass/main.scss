@@ -1,0 +1,34 @@
+//  Импорт файлов
+@import 'normalize-scss';
+@include normalize();
+@import '~aos/dist/aos.css';
+
+@import 'variables';
+@import 'functions';
+@import 'mixins';
+@import 'base';
+@import 'typography';
+
+@import 'wp-classes';
+
+@import 'elements/form-elements';
+@import 'elements/buttons';
+
+@import 'block/header';
+@import 'block/footer';
+@import 'block/section__blot-images';
+@import 'block/section-info';
+@import 'block/section-quote';
+@import 'block/section__two-parts';
+@import 'block/section-interess';
+@import 'block/section__page-intro';
+
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/point';
+@import 'pages/terms';
+@import 'pages/FAQs';
+@import 'pages/login';
+@import 'pages/contact';
+
+@import 'common';
